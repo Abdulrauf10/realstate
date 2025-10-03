@@ -2,12 +2,12 @@
   "expo": {
     "name": "realstate",
     "slug": "realstate",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "restate",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "newArchEnabled": false,
     "ios": {
       "supportsTablet": true
     },
@@ -15,7 +15,10 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.abdulrauf10.realstate",
+      "versionCode": 2,
+      "permissions": []
     },
     "web": {
       "bundler": "metro",
@@ -37,18 +40,37 @@
         "expo-font",
         {
           "fonts": [
-            "./assests/fonts/Rubik-Bold.ttf",
-            "./assests/fonts/Rubik-ExtraBold.ttf",
-            "./assests/fonts/Rubik-Medium.ttf",
-            "./assests/fonts/Rubik-Light.ttf",
-            "./assests/fonts/Rubik-Regular.ttf",
-            "./assests/fonts/Rubik-SemiBold.ttf"
+            "./assets/fonts/Rubik-Bold.ttf",
+            "./assets/fonts/Rubik-ExtraBold.ttf",
+            "./assets/fonts/Rubik-Medium.ttf",
+            "./assets/fonts/Rubik-Light.ttf",
+            "./assets/fonts/Rubik-Regular.ttf",
+            "./assets/fonts/Rubik-SemiBold.ttf"
           ]
         }
-      ]
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 35,
+            "targetSdkVersion": 35,
+            "buildToolsVersion": "35.0.0"
+          }
+        }
+      ],
+      "expo-web-browser"
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "f8d0c11b-8fd0-4c86-95b6-1f9c434d933f"
+      }
     }
   }
 }
