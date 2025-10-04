@@ -18,11 +18,11 @@ import NoResults from '@/components/NoResult';
 import { Card, FeaturedCard } from '@/components/Cards';
 
 import { useAppwrite } from '@/lib/useAppwrite';
-import { useGlobalContext } from '@/lib/global-provider';
+// import { useGlobalContext } from '@/lib/global-provider';
 import { getLatestProperties, getProperties } from '@/lib/appwrite';
 
 const Home = () => {
-  const { user } = useGlobalContext();
+  // const { user } = useGlobalContext();
 
   const params = useLocalSearchParams<{ query?: string; filter?: string }>();
 
@@ -78,18 +78,18 @@ const Home = () => {
           <View className="px-5">
             <View className="flex flex-row items-center justify-between mt-5">
               <View className="flex flex-row">
-                <Image
+                {/* <Image
                   source={{ uri: user?.avatar }}
                   className="size-12 rounded-full"
-                />
+                /> */}
 
                 <View className="flex flex-col items-start ml-2 justify-center">
                   <Text className="text-xs font-rubik text-black-100">
                     Good Morning
                   </Text>
-                  <Text className="text-base font-rubik-medium text-black-300">
+                  {/* <Text className="text-base font-rubik-medium text-black-300">
                     {user?.name}
-                  </Text>
+                  </Text> */}
                 </View>
               </View>
               <Image source={icons.bell} className="size-6" />
